@@ -3,6 +3,7 @@
 //  StopWatch.2.0.
 //
 //  Created by Daniil Akmatov on 4/10/22.
+// Neobis Section 3
 //
 
 import UIKit
