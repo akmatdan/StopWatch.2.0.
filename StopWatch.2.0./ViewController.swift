@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     var minutes: Int = 0
     var seconds: Int = 0
     var stopWatch: Bool = true
+    var isActiveStop: Bool = false
+    var isActivePlay: Bool = false
+    var isActiveReset: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +61,26 @@ class ViewController: UIViewController {
         count = 0
         timer.invalidate()
         TimerLabel.text = makeTimeString(hours: 0, minutes: 0, seconds: 0)
-        self.timePicker.selectRow(0, inComponent: 0, animated: true)
-        self.timePicker.selectRow(0, inComponent: 1, animated: true)
-        self.timePicker.selectRow(0, inComponent: 2, animated: true)
         
         if(stopWatch == false) {
             timePicker.isHidden = false
+            self.timePicker.selectRow(0, inComponent: 0, animated: true)
+            self.timePicker.selectRow(0, inComponent: 1, animated: true)
+            self.timePicker.selectRow(0, inComponent: 2, animated: true)
+        }
+        
+        if isActiveReset {
+            isActiveReset = false
+            resetButton.setImage(UIImage(systemName: "stop.circle.fill"), for: .normal)
+        } else {
+            isActiveReset = true
+            resetButton.setImage(UIImage(systemName: "stop.circle"), for: .normal)
+            
+            isActivePlay = false
+            playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            
+            isActiveStop = false
+            stopButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
         }
     }
     
@@ -74,25 +91,60 @@ class ViewController: UIViewController {
         if(stopWatch == false) {
             timePicker.isHidden = false
         }
+        
+        if isActiveStop {
+            isActiveStop = false
+            stopButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
+        } else {
+            isActiveStop = true
+            stopButton.setImage(UIImage(systemName: "pause.circle"), for: .normal)
+            
+            isActivePlay = false
+            playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            
+            isActiveReset = false
+            resetButton.setImage(UIImage(systemName: "stop.circle.fill"), for: .normal)
+        }
     }
     
     @IBAction func playTapped(_ sender: Any) {
-        
         timerCounting = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         timePicker.isHidden = true
         
-        
+        if isActivePlay {
+            isActivePlay = false
+            playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            
+        } else {
+            isActivePlay = true
+            playButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
+            
+            isActiveStop = false
+            stopButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
+            
+            isActiveReset = false
+            resetButton.setImage(UIImage(systemName: "stop.circle.fill"), for: .normal)
+        }
     }
     
     @objc func timerCounter() -> Void {
-        if(stopWatch){
+        if(stopWatch == true){
             count += 1
             let time = secondsToHoursMinutesSeconds(seconds: count)
             let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
             TimerLabel.text = timeString
             
         } else {
+            
+            if stopWatch == false {
+                isActivePlay = false
+                playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+                isActiveStop = false
+                stopButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
+                isActiveReset = false
+                resetButton.setImage(UIImage(systemName: "stop.circle.fill"), for: .normal)
+            }
             
             let time = secondsToHoursMinutesSeconds(seconds: count)
             
@@ -113,8 +165,12 @@ class ViewController: UIViewController {
                 self.timePicker.selectRow(0, inComponent: 1, animated: true)
                 self.timePicker.selectRow(0, inComponent: 2, animated: true)
             }
+            
             else if s > 0 {
-                count -= 1
+                repeat {
+                    count -= 1
+                }while s == 0
+                s -= 1
             }
             else if m > 0 {
                 repeat {
@@ -128,7 +184,7 @@ class ViewController: UIViewController {
                     m += 59
                     s += 59
                    count -= 1
-                } while m == 0
+                } while h == 0
                 h -= 1
             }
                 
