@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E380E52D28EC26E900553287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E52C28EC26E900553287 /* AppDelegate.swift */; };
 		E380E52F28EC26E900553287 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E52E28EC26E900553287 /* SceneDelegate.swift */; };
-		E380E53128EC26E900553287 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E53028EC26E900553287 /* ViewController.swift */; };
+		E380E53128EC26E900553287 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E53028EC26E900553287 /* StopWatchViewController.swift */; };
 		E380E53428EC26E900553287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380E53228EC26E900553287 /* Main.storyboard */; };
 		E380E53628EC26EF00553287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E380E53528EC26EF00553287 /* Assets.xcassets */; };
 		E380E53928EC26EF00553287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E380E53728EC26EF00553287 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		E380E52928EC26E900553287 /* StopWatch.2.0..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.2.0..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E380E52C28EC26E900553287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E380E52E28EC26E900553287 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E380E53028EC26E900553287 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E380E53028EC26E900553287 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		E380E53328EC26E900553287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E380E53528EC26EF00553287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E380E53828EC26EF00553287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,23 @@
 		E380E52B28EC26E900553287 /* StopWatch.2.0. */ = {
 			isa = PBXGroup;
 			children = (
+				E3B4E0AF290BB2DB00AB7D52 /* View */,
 				E380E52C28EC26E900553287 /* AppDelegate.swift */,
 				E380E52E28EC26E900553287 /* SceneDelegate.swift */,
-				E380E53028EC26E900553287 /* ViewController.swift */,
 				E380E53228EC26E900553287 /* Main.storyboard */,
 				E380E53528EC26EF00553287 /* Assets.xcassets */,
 				E380E53728EC26EF00553287 /* LaunchScreen.storyboard */,
 				E380E53A28EC26EF00553287 /* Info.plist */,
 			);
 			path = StopWatch.2.0.;
+			sourceTree = "<group>";
+		};
+		E3B4E0AF290BB2DB00AB7D52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E380E53028EC26E900553287 /* StopWatchViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E380E53128EC26E900553287 /* ViewController.swift in Sources */,
+				E380E53128EC26E900553287 /* StopWatchViewController.swift in Sources */,
 				E380E52D28EC26E900553287 /* AppDelegate.swift in Sources */,
 				E380E52F28EC26E900553287 /* SceneDelegate.swift in Sources */,
 			);
@@ -294,7 +302,6 @@
 				INFOPLIST_FILE = StopWatch.2.0./Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +329,6 @@
 				INFOPLIST_FILE = StopWatch.2.0./Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

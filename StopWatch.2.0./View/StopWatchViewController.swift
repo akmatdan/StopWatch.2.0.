@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StopWatchViewController: UIViewController {
 
     @IBOutlet var TimerLabel: UILabel!
     @IBOutlet var resetButton: UIButton!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timePicker.isHidden = true
+//        timePicker.isHidden = true
     }
 
     @IBAction func didChangeSegmented(_ sender: UISegmentedControl) {
@@ -208,7 +208,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension StopWatchViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
      func numberOfComponents(in pickerView: UIPickerView) -> Int {
          return 3
