@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E370E197292223640029E547 /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E196292223640029E547 /* ViewData.swift */; };
+		E370E19A292224630029E547 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E199292224630029E547 /* MainViewModel.swift */; };
 		E380E52D28EC26E900553287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E52C28EC26E900553287 /* AppDelegate.swift */; };
 		E380E52F28EC26E900553287 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E52E28EC26E900553287 /* SceneDelegate.swift */; };
 		E380E53128EC26E900553287 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E53028EC26E900553287 /* StopWatchViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E370E196292223640029E547 /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
+		E370E199292224630029E547 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E380E52928EC26E900553287 /* StopWatch.2.0..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.2.0..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E380E52C28EC26E900553287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E380E52E28EC26E900553287 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E370E194292223440029E547 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				E370E195292223520029E547 /* Model */,
+				E3B4E0AF290BB2DB00AB7D52 /* View */,
+				E370E198292224250029E547 /* ViewModel */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		E370E195292223520029E547 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E370E196292223640029E547 /* ViewData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E370E198292224250029E547 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E370E199292224630029E547 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E380E52028EC26E900553287 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +86,7 @@
 		E380E52B28EC26E900553287 /* StopWatch.2.0. */ = {
 			isa = PBXGroup;
 			children = (
-				E3B4E0AF290BB2DB00AB7D52 /* View */,
+				E370E194292223440029E547 /* MainModule */,
 				E380E52C28EC26E900553287 /* AppDelegate.swift */,
 				E380E52E28EC26E900553287 /* SceneDelegate.swift */,
 				E380E53228EC26E900553287 /* Main.storyboard */,
@@ -146,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E370E19A292224630029E547 /* MainViewModel.swift in Sources */,
 				E380E53128EC26E900553287 /* StopWatchViewController.swift in Sources */,
 				E380E52D28EC26E900553287 /* AppDelegate.swift in Sources */,
+				E370E197292223640029E547 /* ViewData.swift in Sources */,
 				E380E52F28EC26E900553287 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
