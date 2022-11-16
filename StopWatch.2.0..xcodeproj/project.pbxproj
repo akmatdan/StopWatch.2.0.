@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		E370E197292223640029E547 /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E196292223640029E547 /* ViewData.swift */; };
 		E370E19A292224630029E547 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E199292224630029E547 /* MainViewModel.swift */; };
+		E370E19C29231D4C0029E547 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E19B29231D4C0029E547 /* MainViewController.swift */; };
+		E370E19E29231D730029E547 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E19D29231D730029E547 /* ViewExtension.swift */; };
+		E370E1A029231E070029E547 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E19F29231E070029E547 /* TestView.swift */; };
+		E370E1A22923C0A30029E547 /* StopWatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370E1A12923C0A30029E547 /* StopWatchExtension.swift */; };
 		E380E52D28EC26E900553287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E52C28EC26E900553287 /* AppDelegate.swift */; };
 		E380E52F28EC26E900553287 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E52E28EC26E900553287 /* SceneDelegate.swift */; };
 		E380E53128EC26E900553287 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380E53028EC26E900553287 /* StopWatchViewController.swift */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		E370E196292223640029E547 /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		E370E199292224630029E547 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E370E19B29231D4C0029E547 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E370E19D29231D730029E547 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		E370E19F29231E070029E547 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		E370E1A12923C0A30029E547 /* StopWatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchExtension.swift; sourceTree = "<group>"; };
 		E380E52928EC26E900553287 /* StopWatch.2.0..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.2.0..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E380E52C28EC26E900553287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E380E52E28EC26E900553287 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				E380E53028EC26E900553287 /* StopWatchViewController.swift */,
+				E370E19B29231D4C0029E547 /* MainViewController.swift */,
+				E370E19F29231E070029E547 /* TestView.swift */,
+				E370E19D29231D730029E547 /* ViewExtension.swift */,
+				E370E1A12923C0A30029E547 /* StopWatchExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,9 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E370E1A029231E070029E547 /* TestView.swift in Sources */,
 				E370E19A292224630029E547 /* MainViewModel.swift in Sources */,
+				E370E1A22923C0A30029E547 /* StopWatchExtension.swift in Sources */,
 				E380E53128EC26E900553287 /* StopWatchViewController.swift in Sources */,
+				E370E19E29231D730029E547 /* ViewExtension.swift in Sources */,
 				E380E52D28EC26E900553287 /* AppDelegate.swift in Sources */,
+				E370E19C29231D4C0029E547 /* MainViewController.swift in Sources */,
 				E370E197292223640029E547 /* ViewData.swift in Sources */,
 				E380E52F28EC26E900553287 /* SceneDelegate.swift in Sources */,
 			);
